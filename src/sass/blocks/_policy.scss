@@ -1,0 +1,17 @@
+.policy {
+    padding-top: 100px;
+    z-index: 0;
+    .hamburger {
+        span {
+            background: #000;
+        }
+    }
+    &__list {
+        margin: 0 auto;
+        width: 80%;
+        &-item {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+    }
+}

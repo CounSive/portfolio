@@ -1,0 +1,85 @@
+body.dark {
+    transition: 0.6s all;
+    background-color: #000;
+    color: #fff;
+    .resume {
+        ul {
+            li {
+                &::after {
+                    background-color: #fff;
+                }
+            }
+        }
+        &__item {
+            &:before {
+                background-color: #fff;
+            }
+        }
+    }
+    .skills {
+        &__item {
+            border: 1px solid white;
+            color: #fff;
+        }
+    }
+    .contacts {
+        &__form {
+            label {
+                background-color: #000;
+                color: #fff;
+            }
+            label.error {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+        &__input {
+            input {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+        &__textarea {
+            textarea {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+        &__btn {
+            background: #000;
+            &:hover {
+                background-color: $main-color;
+                color: #fff;
+            }
+        }
+    }
+    .sidepanel {
+        &__link {
+            svg path {
+                transition: 0.6s all;
+            }
+            &:hover {
+                svg path {
+                    fill: #fff;
+                    
+                }
+            }
+        }
+        &__themetoggle {
+            transition: 0.6s all;
+            span {
+                
+                transition: 0.6s all;
+                color: $main-color;
+                &:hover {
+                    color:#fff;
+                }
+            }
+        }
+    }
+    .policy {
+        span {
+            background: #fff;
+        }
+    }
+}

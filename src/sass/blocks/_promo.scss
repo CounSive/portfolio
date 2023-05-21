@@ -1,0 +1,80 @@
+.promo {
+    min-height: 100vh;
+    position: relative;
+    background: url('../img/main_bg.jpg') no-repeat 50%/cover;
+    padding-top: 205px;
+    &__title {
+        
+        width: 535px;
+        margin-top: 10px;
+    }
+    &__btns {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 250px;
+    }
+    &__subtitle {
+        
+        position: relative;
+        padding-left: 10px;
+        z-index: 2;
+        @include befor_circle;
+        
+    }
+    &__link {
+        color: #FFFDFD;
+        font-weight: bold;
+        &:hover {
+            color: #FFFDFD;
+            text-decoration: none;
+        }
+        
+    }
+    .btn {
+        position: relative;
+        z-index: 2;
+        .btn__blobs {
+            height: 100%;
+            filter: url(#goo);
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: -3px;
+            right: -1px;
+            z-index: -1;
+            div {
+              background-color: $main-color;
+              width: 34%;
+              height: 100%;
+              border-radius: 100%;
+              position: absolute;
+              transform: scale(1.4) translateY(125%) translateZ(0);
+              transition: all 700ms ease;
+              &:nth-child(1) {
+                left: -5%;
+              }
+              &:nth-child(2) {
+                left: 30%;
+                transition-delay: 60ms;
+              }
+              &:nth-child(3) {
+                left: 66%;
+                transition-delay: 25ms;
+              }
+            }
+          }
+        &:hover {
+        color: #fff;
+            .btn__blobs {
+                div {
+                    transform: scale(1.4) translateY(0) translateZ(0);
+                }
+            }
+        }
+    }
+   
+    
+}
