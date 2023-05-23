@@ -1,6 +1,7 @@
 .sidepanel {
     position: fixed;
-    top: 230px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 50px;
     display: flex;
     flex-direction: column;
@@ -35,15 +36,5 @@
             }
         }
     }
-    &__themetoggle {
-        transition: 0.6s all;
-        span {
-            
-            transition: 0.6s all;
-            color: $main-color;
-            &:hover {
-                color: grey;
-            }
-        }
-    }
+    
 }

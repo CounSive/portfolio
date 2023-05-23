@@ -97,7 +97,8 @@ $(document).ready(function(){
           resume:[
             'icons/experience/university.svg',
             'icons/experience/courses.svg',
-            'icons/experience/developer.svg'
+            'icons/experience/developer.svg',
+            'icons/experience/designer.svg'
           ]
           
         },
@@ -122,7 +123,8 @@ $(document).ready(function(){
           resume:[
             'icons/experience/university_white.svg',
             'icons/experience/courses_white.svg',
-            'icons/experience/developer_white.svg'
+            'icons/experience/developer_white.svg',
+            'icons/experience/designer_white.svg'
           ]
           }
         }
@@ -160,7 +162,7 @@ $(document).ready(function(){
         // Change images in education section
         const resumeImgElements = document.querySelectorAll('.resume__item-icon img');
         resumeImgElements.forEach((imgElement, index) => {
-            if ([0, 1, 2].includes(index)) {
+            if ([0, 1, 2, 3].includes(index)) {
               const imagePath = theme === 'dark' ? imagePaths.dark.resume[index] : imagePaths.light.resume[index];
               imgElement.src = imagePath;
             }
@@ -181,15 +183,15 @@ $(document).ready(function(){
         try {
           if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark');
-            document.querySelector('.sidepanel__themetoggle span').textContent = 'dark_mode';
+            document.querySelector('.menu__change-themetoggle span').textContent = 'dark_mode';
           } else {
             document.body.classList.remove('dark');
-            document.querySelector('.sidepanel__themetoggle span').textContent = 'wb_sunny';
+            document.querySelector('.menu__change-themetoggle span').textContent = 'wb_sunny';
           }
         } catch (err) {}
       }
       
-      document.querySelector('.sidepanel__themetoggle').addEventListener('click', (event) => {
+      document.querySelector('.menu__change-themetoggle').addEventListener('click', (event) => {
         event.preventDefault();
         if (localStorage.getItem('theme') === 'dark') {
           localStorage.removeItem('theme');

@@ -3,24 +3,27 @@ header {
     position: fixed;
     top: 0;
     height: 72px;
-    background-color: $main-color;
+    background-color: rgba($color: #fff, $alpha: 0.2);
     padding-top: 18px;
     z-index: 10;
     
     .menu {
-        
+        &__block {
+            display: flex;
+            justify-content: space-between;
+        }
         nav {
             padding: 0 50px 0 50px;
             width: 100%;
+            /* display: flex;
+            justify-content: space-between; */
         }
-        &__block {
-            display: flex;
-            justify-content: center;
-        }
+        
         &__list {
             list-style-type: none;
             display: flex;
             justify-content: space-between;
+           
         }
         &__link {
             text-transform: uppercase;
@@ -28,48 +31,14 @@ header {
             font-weight: bold;
             font-size: 24px;
             transition: all 0.6s;
-            &:before {
-                content: '';
-                position: absolute;
-                left: -25px;
-                top: 11px;
-                width: 15px;
-                height: 15px;
-                border-radius: 100%;
-                border: 1px solid #000000;
-                
-            }
-            &:hover {
-                &:nth-child(1) {
-                    box-shadow: inset 130px 0 0 0 #FFFFFF;
-                }
-                &:nth-child(2) {
-                    box-shadow: inset 145px 0 0 0 #FFFFFF;
-                }
-                &:nth-child(3) {
-                    box-shadow: inset 170px 0 0 0 #FFFFFF;
-                }
-                &:nth-child(4) {
-                    box-shadow: inset 125px 0 0 0 #FFFFFF;
-                }
-                &:nth-child(5) {
-                    box-shadow: inset 165px 0 0 0 #FFFFFF;
-                }
-                &:nth-child(6) {
-                    box-shadow: inset 130px 0 0 0 #FFFFFF;
-                }
-                
-                &:before {
-                    background-color: #fff;
-                    border: none;
-                }
-            }
+            
             a {
                 display: block;
                 width: 100%;
                 color: #FFFFFF;
                 &:hover {
                     color: $main-color;
+                    text-decoration: none;
                 }
             }
         }
@@ -79,159 +48,54 @@ header {
         &__social {
             display: none;
         }
+        &__change {
+            padding-top: 6px;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 10px;
+            &-themetoggle {
+                
+                padding-right: 10px;
+                transition: 0.6s all;
+                span {
+                    
+                    transition: 0.6s all;
+                    color: #fff;
+                    &:hover {
+                        color: grey;
+                    }
+                }
+            }
+            select {
+                appearance: none;
+                border: 0;
+                outline: 0;
+                font: inherit;
+                width: 60px;
+                height: 20px;
+                padding-left: 10px;
+                background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg)
+                    no-repeat right 5px center / 20px;
+                color: white;
+                border-radius: 4px;
+                box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                option {
+                  color: $main-color;
+                  background-color: rgba($color: #fff, $alpha: 0.2);
+                }
+                &:focus {
+                  outline: none;
+                }
+                &::-ms-expand {
+                  display: none;
+                }
+              }
+              
+            
+        }
     }
+    
 }
 
 
-@media(max-width:767px) {
-    .hamburger {
-        z-index: 20;
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        height: 21px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        cursor: pointer;
-        span {
-            display: block;
-            width: 30px;
-            height: 3px;
-            background: #E3E8DE;
-        }
-        span.long {
-            width: 36px;
-        }
-    }
-    header {
-        z-index: 10;
-        background: none;
-        .menu {
-            z-index: 20;
-            position: fixed;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100vh;
-            z-index: 10;
-            visibility: hidden;
-            opacity: 0;
-            transition: all 0.6s;
-            &.active {
-                left: 0%;
-                visibility: visible;
-                opacity: 1;
-            }
-            &__block {
-                display: block;
-                position: relative;
-                width: 345px;
-                background-color: $main-color;
-                height: 100%;
-                transition: all 0.6s;
-                padding-top: 140px;
-                padding-left: 40px;
-                z-index: 10;
-            }
-            &__close {
-                display: block;
-                position: absolute;
-                top: 25px;
-                right: 25px;
-                cursor: pointer;
-            }
-            &__list {
-                display: block;
-                list-style-type: none;
-                padding-left: 35px;
-            }
-            &__link {
-                text-transform: uppercase;
-                position: relative;
-                font-weight: bold;
-                font-size: 24px;
-                line-height: 36px;
-                margin-bottom: 15px;
-                transition: all 0.6s;
-                &:before {
-                    content: '';
-                    position: absolute;
-                    left: -35px;
-                    top: 11px;
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 100%;
-                    border: 1px solid #000000;
-                    
-                }
-                &:hover {
-                    &:nth-child(1) {
-                        box-shadow: inset 130px 0 0 0 #FFFFFF;
-                    }
-                    &:nth-child(2) {
-                        box-shadow: inset 145px 0 0 0 #FFFFFF;
-                    }
-                    &:nth-child(3) {
-                        box-shadow: inset 170px 0 0 0 #FFFFFF;
-                    }
-                    &:nth-child(4) {
-                        box-shadow: inset 125px 0 0 0 #FFFFFF;
-                    }
-                    &:nth-child(5) {
-                        box-shadow: inset 165px 0 0 0 #FFFFFF;
-                    }
-                    &:nth-child(6) {
-                        box-shadow: inset 130px 0 0 0 #FFFFFF;
-                    }
-                    
-                    &:before {
-                        background-color: #fff;
-                        border: none;
-                    }
-                }
-                a {
-                    display: block;
-                    width: 100%;
-                    color: #FFFFFF;
-                    &:hover {
-                        color: $main-color;
-                    }
-                }
-            }
-            &__social {
-                position: absolute;
-                bottom: 50px;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 90px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                a {
-                    svg path {
-                        transition: 0.6s all;
-                    }
-                    &:hover{
-                        svg path{
-                            fill: #FFFFFF;
-                        }
-                    }
-                }
-            }
-            &__overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: #fff;
-                opacity: 0.75;
-            }
-            
-            
-        }   
-    }
-    
-} 
