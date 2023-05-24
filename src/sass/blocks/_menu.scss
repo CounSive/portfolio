@@ -3,7 +3,7 @@ header {
     position: fixed;
     top: 0;
     height: 72px;
-    background-color: rgba($color: #fff, $alpha: 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     padding-top: 18px;
     z-index: 10;
     
@@ -15,8 +15,6 @@ header {
         nav {
             padding: 0 50px 0 50px;
             width: 100%;
-            /* display: flex;
-            justify-content: space-between; */
         }
         
         &__list {
@@ -35,7 +33,7 @@ header {
             a {
                 display: block;
                 width: 100%;
-                color: #FFFFFF;
+                color: #ffffff;
                 &:hover {
                     color: $main-color;
                     text-decoration: none;
@@ -82,7 +80,7 @@ header {
                 cursor: pointer;
                 option {
                   color: $main-color;
-                  background-color: rgba($color: #fff, $alpha: 0.2);
+                  background-color: #fff;
                 }
                 &:focus {
                   outline: none;

@@ -2,6 +2,18 @@ body.dark {
     transition: 0.6s all;
     background-color: #000;
     color: #fff;
+    .promo {
+        header {
+            background-color: rgba(255, 255, 255, 0.3);
+            .menu {
+                select {
+                    option {
+                        background-color: #444444;
+                    }
+                }
+            }
+        }
+    }
     .resume {
         ul {
             li {
