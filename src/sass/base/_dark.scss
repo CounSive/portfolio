@@ -1,6 +1,6 @@
 body.dark {
     transition: 0.6s all;
-    background-color: #000;
+    background-color: #242A30;
     color: #fff;
     .promo {
         header {
@@ -37,28 +37,28 @@ body.dark {
     .contacts {
         &__form {
             label {
-                background-color: #000;
+                background-color: #242A30;
                 color: #fff;
             }
             label.error {
-                background-color: #000;
+                background-color: #242A30;
                 color: #fff;
             }
         }
         &__input {
             input {
-                background-color: #000;
+                background-color: #242A30;
                 color: #fff;
             }
         }
         &__textarea {
             textarea {
-                background-color: #000;
+                background-color: #242A30;
                 color: #fff;
             }
         }
         &__btn {
-            background: #000;
+            background: #242A30;
             &:hover {
                 background-color: $main-color;
                 color: #fff;
@@ -90,8 +90,10 @@ body.dark {
         }
     }
     .policy {
-        span {
-            background: #fff;
+        .hamburger {
+            span {
+                background: #fff;
+            }
         }
     }
 }

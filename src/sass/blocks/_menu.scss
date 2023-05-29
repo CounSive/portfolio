@@ -4,17 +4,19 @@ header {
     top: 0;
     height: 72px;
     background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 18px;
+    padding-top: 25px;
     z-index: 10;
     
     .menu {
+        width: 1140px;
+        margin: 0 auto;
         &__block {
             display: flex;
             justify-content: space-between;
         }
         nav {
             padding: 0 50px 0 50px;
-            width: 100%;
+            width: 90%;
         }
         
         &__list {
@@ -27,7 +29,7 @@ header {
             text-transform: uppercase;
             position: relative;
             font-weight: bold;
-            font-size: 24px;
+            font-size: 15px;
             transition: all 0.6s;
             
             a {
@@ -47,10 +49,9 @@ header {
             display: none;
         }
         &__change {
-            padding-top: 6px;
             display: flex;
             justify-content: space-between;
-            padding-right: 10px;
+            padding-right: 50px;
             &-themetoggle {
                 
                 padding-right: 10px;
@@ -68,6 +69,7 @@ header {
                 appearance: none;
                 border: 0;
                 outline: 0;
+                
                 font: inherit;
                 width: 60px;
                 height: 20px;

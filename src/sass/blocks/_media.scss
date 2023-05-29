@@ -107,6 +107,7 @@
         &__skills {
             grid-template-columns: 380px;
             grid-auto-rows: minmax(115px, auto);
+            
             &-item {
                 grid-template-columns: 40px 320px;
                 column-gap: 20px;
@@ -122,15 +123,6 @@
     .skills {
         &__items {
             padding: 0 20px;
-        }
-        &__ratings {
-            grid-template-columns: repeat(auto-fit, 320px);
-            justify-content: space-between;
-            padding: 0;
-            column-gap: 0;
-            &-line {
-                width: 100%;
-            }
         }
     }
     .contacts {
@@ -236,7 +228,7 @@
                 text-transform: uppercase;
                 position: relative;
                 font-weight: bold;
-                font-size: 24px;
+                font-size: 19px;
                 line-height: 36px;
                 margin-bottom: 15px;
                 transition: all 0.6s;
@@ -319,24 +311,24 @@
             &__change {
                 position: absolute;
                 bottom: 80px;
-                left: 51%;
+                left: 53%;
                 transform: translateX(-50%);
                 width: 100px;
                 padding-top: 6px;
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 padding-right: 10px;
                 &-themetoggle {
                     span {
                         color: #000;
                     }
                 }
-                select {
+                /* select {
                     color:#000;
                     option {
                         color: #000;
                     }
-                }
+                } */
             }
             
         }   
@@ -371,15 +363,6 @@
             padding: 0;
             justify-content: center;
             gap: 20px;
-        }
-        &__ratings {
-            grid-template-columns: repeat(auto-fit, 320px);
-            grid-auto-rows: minmax(70px, auto);
-            justify-content: center;
-            margin-top: 40px;
-            &-line {
-                width: 100%;
-            }
         }
     }
     .portfolio {
@@ -447,12 +430,35 @@
                  padding-left: 20px;
             }
             &__link {
-                font-size: 24px;
+                font-size: 15px;
             }
 
             
         }
         
+    }
+    .policy {
+        .hamburger {
+            right: 20px;
+        }
+        &__btns {
+            margin-top: 30px;
+        }
+        .menu {
+            nav {
+                padding: 0;
+            }
+            &__block {
+                 width: 250px;
+                 padding-top: 90px;
+                 padding-left: 20px;
+            }
+            &__link {
+                font-size: 15px;
+            }
+
+            
+        }
     }
     .about {
         &__wrapper {
@@ -473,9 +479,6 @@
         }
         &__items {
             margin-top: 20px;
-        }
-        &__ratings {
-            grid-template-columns: repeat(auto-fit,300px);
         }
     }
     .contacts {

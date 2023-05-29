@@ -12,20 +12,7 @@ $(document).ready(function(){
         menu.classList.remove('active');
     });
 
-    const counters = document.querySelectorAll('.skills__ratings-counter'),
-        lines = document.querySelectorAll('.skills__ratings-line span');
-
-    counters.forEach( (item, i) => {
-        lines[i].style.width = item.innerHTML;
-    });
-
-    $("a[href^=#portfolio]").click(function(){
-        const _href = $(this).attr("href");
-        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-        return false;
-    });
-
-    $("a[href^=#about]").click(function(){
+    $("a[href^=#]").click(function(){
         const _href = $(this).attr("href");
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
         return false;
@@ -47,15 +34,15 @@ $(document).ready(function(){
         },
         messages: {
           name: {
-            required: "Пожалуйста, введите свое имя",
-            minlength: jQuery.validator.format("Введите {0} символа!")
+            required: "Please enter your name",
+            minlength: jQuery.validator.format("Enter at least {0} characters!")
           },
           email: {
-            required: "Пожалуйста, введите свою почту",
-            email: "Неправильно введен адрес почты"
+            required: "Please enter your email",
+            email: "Invalid email address"
           },
           checkbox: {
-            required: "Пожалуйста, поставте галочку"
+            required: "Please check the box"
           }
         },
         submitHandler: function (form) {
@@ -204,6 +191,53 @@ $(document).ready(function(){
       
       addDarkClassToHTML();
       changeImages(localStorage.getItem('theme'));
+
+
+      const header = document.querySelector('header');
+
+      document.addEventListener('scroll', () => {
+        let scrollY = window.scrollY;
+        let scrollHeight = window.innerHeight;
+
+        if (scrollY > scrollHeight) {
+          header.style.backgroundColor = '#353b41';
+        } else {
+          header.style.backgroundColor = ''; // Восстановление исходного цвета, если прокрутка меньше 1vh
+        }
+      });
+      
+
+      const select = document.querySelector('select');
+      const allLang = ['en', 'ua'];
+
+      select.addEventListener('change', changeURLLanguage);
+
+      function changeURLLanguage(){
+        let lang = select.value;
+        location.href = window.location.pathname + '#'+lang;
+        location.reload();
+      }
+
+      function changeLanguage(){
+        let hash = window.location.hash;
+        hash = hash.substr(1)
+        console.log(hash);
+        if (!allLang.includes(hash)){
+          location.href = window.location.pathname + '#ua';
+          location.reload();
+        }
+        select.value = hash;
+        for (let key in langArr){
+          let elem = document.querySelector('.lng-'+key);
+          if (elem){
+            elem.innerHTML = langArr[key][hash];
+          }
+          
+        }
+      }
+
+      changeLanguage();
+
       
 })
 
