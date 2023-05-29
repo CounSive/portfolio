@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    const hamburger = document.querySelector('.hamburger'),
+    
+      const hamburger = document.querySelector('.hamburger'),
         menu = document.querySelector('.menu'),
         closeElem = document.querySelector('.menu__close');
 
@@ -7,10 +8,15 @@ $(document).ready(function(){
     hamburger.addEventListener('click', () => {
         menu.classList.add('active');
     });
-
+    $('ul li a').click(function() {
+      if ( $('.menu').hasClass('active')) {
+       $('.menu').removeClass('active');
+      }
+   }) 
     closeElem.addEventListener('click', () => {
         menu.classList.remove('active');
     });
+    
 
     $("a[href^=#]").click(function(){
         const _href = $(this).attr("href");

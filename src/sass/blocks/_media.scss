@@ -8,14 +8,13 @@
     .container {
         max-width: 960px;
     }
-    .promo{
-        padding-top: 205px;
-    }
+    
     header {
         padding-top: 24px;
         .menu {
+            width: 960px;
             &__link {
-                font-size: 20px;
+                font-size: 15px;
                 line-height: 25px;
             }
             &__change {
@@ -87,6 +86,7 @@
     header {
         padding-top: 24px;
         .menu {
+            width: 720px;
             &__link {
                 font-size: 15px;
             }
@@ -152,7 +152,6 @@
         }
     }
     .promo {
-        padding-top: 205px;
         &__title {
             width: 350px;
             font-size: 20px;
@@ -406,7 +405,6 @@
         }
     }
     .promo {
-        padding-top: 205px;
         &__subtitle {
             font-size: 13px;
         }

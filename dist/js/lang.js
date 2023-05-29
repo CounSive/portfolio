@@ -160,7 +160,7 @@ const langArr = {
         "en": "Using any convenient method for you:",
     },
     "contacts-subtext": {
-        "ua": "Або залиште свої дані, і я сама вам напишу:",
+        "ua": "Або залиште свої дані, і я сам вам напишу:",
         "en": "Or leave your details, and I will contact you myself:",
     },
     "name-text": {

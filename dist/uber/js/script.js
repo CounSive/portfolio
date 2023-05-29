@@ -14,4 +14,5 @@ window.addEventListener('DOMContentLoaded', () => {
             menu.classList.toggle('menu_active');
         })
     })
+    console.log(menuItem);
 })
