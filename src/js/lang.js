@@ -1,6 +1,6 @@
 const langArr = {
     "about": {
-        "ua": "про мене",
+        "ua": " про мене",
         "en": "about me",
     },
     "resume": {
@@ -20,7 +20,7 @@ const langArr = {
         "en": "contacts",
     },
     "about-section": {
-        "ua": "про мене",
+        "ua": "Про мене",
         "en": "About me",
     },
     "name": {
